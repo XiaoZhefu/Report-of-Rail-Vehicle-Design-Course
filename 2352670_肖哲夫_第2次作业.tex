@@ -1,0 +1,142 @@
+\documentclass[12pt, oneside, a4paper]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{ctex}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{tocloft}
+\usepackage[{top=2.54cm, bottom=2.54cm, left=3.18cm, right=3.18cm}]{geometry}
+\usepackage{graphicx}
+\usepackage[breaklinks, colorlinks=false, hidelinks]{hyperref}
+\usepackage{mathptmx}
+\usepackage{xcolor}
+\usepackage{xeCJK}
+
+\ctexset{
+    section={   
+        name={,、},
+        number={\heiti\chinese{section}},
+        format=\heiti\raggedright\zihao{3}\bfseries,
+        aftername={\hspace{0.5em}},
+        beforeskip=1ex,
+        afterskip=1ex,
+    },
+    subsection={
+        name={,.},
+        number={\arabic{section}.\arabic{subsection}},
+        format=\songti\raggedright\zihao{4}\bfseries,
+        aftername={\hspace{0.5em}},
+        beforeskip=0ex,
+        afterskip=0ex,
+    },
+    subsubsection={
+        name={,.},
+        number={\arabic{section}.\arabic{subsection}.\arabic{subsubsection}},
+        format=\songti\raggedright\zihao{-4}\bfseries,
+        aftername={\hspace{0.5em}},
+        beforeskip=0ex,
+        afterskip=0ex,
+    },
+}
+\setlength{\cftbeforesecskip}{1ex plus 0.1ex}
+\setlength{\cftbeforesubsecskip}{0ex plus 0.05ex}
+\setlength{\cftbeforesubsubsecskip}{0ex plus 0.05ex}
+\pagestyle{plain}
+\renewcommand{\figurename}{\small{图}}
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold={2}]{SimSun}
+\setCJKfamilyfont{zh}{SimSun}
+\setCJKfamilyfont{ja}{BIZ UDMincho}
+\xeCJKDeclareCharClass{CJK}{
+  "24EA,
+  "2460->"2473,
+  "3251->"32BF,
+  "24FF,
+  "2776->"277F,
+  "24EB->"24F4
+}
+
+
+
+%----------分割线----------%
+
+
+
+\begin{document}
+
+
+
+\thispagestyle{empty}
+\begin{center}{
+    \fontsize{26pt}{26pt}\selectfont
+    \vspace*{2.75\baselineskip}
+    \includegraphics[width=0.6\textwidth]{tongji-university-logo-1024px.png}\\
+    [\baselineskip]
+    \heiti{轨道车辆设计作业（二）}\\
+    \fontsize{18pt}{24pt}\selectfont
+    \vspace*{2\baselineskip}
+    \songti{\begin{tabular}{l}
+            {\heiti{}完成日期：}2026年5月29日 \\
+            {\heiti{}报告作者：}肖哲夫~~2352670
+        \end{tabular}
+        \vspace{0.25cm}
+        \\\textcolor{gray}{\textit{Made with }\LaTeX}}
+    }
+\end{center}
+\newpage{}
+\setcounter{page}{1}
+\begin{center}
+    \heiti\zihao{2} 轻量化设计的系统思维
+\end{center}
+\vspace{-1cm}
+\begin{center}
+    \heiti\zihao{2} ——材料 - 结构的全链条优化
+\end{center}
+\vspace{1ex}
+\section{\heiti{概述}}
+\par{}
+轻量化设计是现代工程领域中最具跨学科特征的技术方向之一\textsuperscript{\textcolor{red}{\cite{ref1}}}，阅读伯恩德·克莱恩教授所著的《轻量化设计——计算基础与构件结构》，我系统了解了轻量化设计的理论基础、深刻理解了轻量化作为一门工程科学的整体思维框架。
+\par{}
+\quad{}
+\par{}
+\section{\heiti{核心思想与主要内容}}
+\par{}
+本书从材料轻量化、形状轻量化、制造轻量化等几个维度，从平衡技术性能、经济成本与可持续发展并寻找其最优解的优化轻量化理念出发，强调使用轻量化的实际收益，如降低能耗、提升性能等来衡量轻量化措施的价值。
+\par{}
+从全书内容来看，这26章的编排存在鲜明的逻辑递进关系，前7章从轻量化的目标、问题结构、方法与工具、轻量化构造、材料选择准则、轻量化材料、轻量化设计原则等方面，详细阐述了作者的设计理念，尤其是材料设计准则一章，将看似简单的问题从量化视角出发，如用轻量化系数LBK来衡量轻量化程度。
+\par{}
+第8至16章从弹性理论等出发，针对薄壁型杆、开口型杆、桁梁型材、箱型材等多种形状的结构逐步构建分析轻量化结构的理论工具。尤其是力流法的引入，有助于设计者直观理解力在结构中的传播途径，从而针对性优化材料配置。
+\par{}
+第17至22章则聚焦特殊构造与连接技术，如三明治单元、加固性设计等。其中板材的凸起分析一章占用了极大篇幅，也体现了稳定性问题在薄壁轻量化结构中的重要地位。
+\par{}
+最后4章则以结构优化、疲劳寿命、可靠性和结构声学四个主题代表了现代轻量化设计的前沿方向。
+\par{}
+\quad{}
+\par{}
+\section{\heiti{感想}}
+\par{}
+纵观全书，我认为该书有三个鲜明的特点：
+\par{}
+\symbol{"2460}理论与实践高度统一。本书的最后近一百页全是练习，均通过案例来加深读者的理解，并配有详细的解题过程，而不只是一条算式作为答案，对于初学者较为友好。虽然时间有限，我并未深入探究这些习题，但我认为这些习题非常值得慢慢品鉴。
+\par{}
+\symbol{"2461}成本意识贯彻始终。从头几章，尤其是第2章提出的成本模型开始，作者始终秉持着这样的理念：工程的本质是在约束条件下求解最优方案，忽视成本的轻量化不是真正的工程。结合轨道车辆设计与工程项目管理等课程所学内容，我意识到这些理念的确已被贯彻到大多数设计的方方面面，将来做设计时我也应注意成本方面。
+\par{}
+\symbol{"2462}本书覆盖了从材料微观性能（如弹性模量、断裂韧性）到宏观结构（杆、梁、壳体、三明治板），再到结构系统性能（疲劳寿命、可靠性、声学行为）的完整知识链条，培养读者从整体角度理解轻量化问题的能力。
+\par{}
+对于车辆工程专业而言，轻量化设计的价值尤为突出。不论是汽车还是轨道车辆，不论是传统燃油车辆、新能源汽车还是电力牵引轨道车辆，对节约能源与制造成本均有一定要求，同时对强度、寿命等指标也存在要求。因此该书不仅提供了设计轻量化结构的一般方法，还培养了读者面向约束条件求解最优方案的工程思维，有利于我们面向生产实践进行轻量化结构的设计研究。
+\par{}
+\quad{}
+\par{}
+\begin{flushleft}
+    \begin{small}
+        \begin{thebibliography}{99}
+            \bibitem{ref1}Bernd Klein. 轻量化设计  计算基础与构件结构  第2版[M]. 北京: 机械工业出版社, 2016: 2.
+            \vspace{-3mm}
+        \end{thebibliography}
+    \end{small}
+\end{flushleft}
+
+
+
+\end{document}

@@ -1,0 +1,544 @@
+ ************************************************************************
+ **                                                                    **
+ **                                                                    **
+ **                     Altair OptiStruct(TM) 2026                     **
+ **                                                                    **
+ **             Advanced Engineering Analysis, Design and              **
+ **        Optimization Software from Altair Engineering, Inc.         **
+ **                                                                    **
+ **   OptiStruct includes an enhanced proprietary version of NASTRAN   **
+ **                                                                    **
+ **                                                                    **
+ **               Windows 10  (Build 9200)  GANJIANGMOYE               **
+ **           32 CPU:  13th Gen Intel(R) Core(TM) i9-13900HX           **
+ **                    2232 MB RAM,  33629 MB swap                     **
+ **                                                                    **
+ ** Build: 1291590uwn33xxx_Ce64RB6s8UH14M-000  1046006004000000004000  **
+ ************************************************************************
+ **  COPYRIGHT (C) 1996-2025                 Altair Engineering, Inc.  **
+ ** All Rights Reserved.  Copyright notice does not imply publication. **
+ **         Contains trade secrets of Altair Engineering, Inc.         **
+ ** Decompilation or disassembly of this software strictly prohibited. **
+ ************************************************************************
+ 
+  
+ *** OptiStruct defaults set from:
+   install config file: D:/Program Files/Altair/2026/hwsolvers/optistruct.cfg.
+  
+  
+ NOTE # 9199
+ MSGLMT=STRICT is active, all messages will be printed unless there is
+ a subsequent MSGLMT definition to limit error or warning messages.
+ You can also suppress some less important warning messages by use of
+  MSGLMT=BRIEF or UNREF (in config file or in the input data).
+  
+ *** INFORMATION # 9196
+ Using 1 NVIDIA cards for GPU acceleration.
+  
+ *** INFORMATION # 2752
+ GPU device with GPUID = 0 is used for computation.
+ Device name = NVIDIA GeForce RTX 4060 Laptop GPU, with compute capability 8.9.
+ GPU memory free =  7096.00 MB, total =  8187.50 MB.
+  
+ 1 PARAM(s) were set:
+    CHECKEL,NO
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ ***************************** INFORMATION ******************************
+ * For OptiStruct useful guidelines and tips (Nonlinear analysis
+ * convergence, the model validity check etc...), go to the URL:
+ * https://help.altair.com/hwsolvers/os/topics/solvers/os/debugging.htm
+ ************************************************************************
+  
+ *** INFORMATION # 6513
+ The default of MORIENT is NORM for CONTACT with TRACK=FINITE/CONSLI.
+  
+  
+  
+ *** INFORMATION # 2406
+ There exist gap/contact elements and linear analysis SUBCASE(s).
+ For linear SUBCASE, the gap/contact behavior depends on the
+ initial open/closed status and does not change.
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING # 4783
+ Continuous sliding is ignored for contact as there is no LGDISP analysis.
+  
+ *** INFORMATION # 4739
+ The structure of surface-to-surface contact element is quite different than
+ that of node-to-surface contact element. No internal CGAP/CGAPG elements are
+ created for surface-to-surface contact.
+  
+ *** SUMMARY of characteristic edge length of CONTACT/TIE:
+ ------------------------
+    CONTACT      CharLen 
+ ------------------------
+          1   2.0024E+00
+          2   1.9962E+00
+ ------------------------
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** INFORMATION # 815
+ The total number of rigid elements, whose rotational dependent d.o.f.
+ are removed because there is no need to constrain those d.o.f., is 12.
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING # 5611
+ The rigid element contribution is not included in geometric stiffness 
+ matrix for buckling. PARAM,KGRGD,YES will consider it
+  
+ *** SUMMARY of reference nodal linear stiffness for penalty calculation
+     of penalty-based CONTACT/TIE:
+ -------------------------------------
+    CONTACT    Secondary         Main 
+ -------------------------------------
+          1   8.9638E+03   1.0178E+04    
+          2   1.0062E+04   9.5291E+03    
+ -------------------------------------
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING # 3477
+ Solver out-of-core memory requirement 11076 MB exceeds host physical
+ memory 2231 MB. Please reduce number of processes per host or use more hosts.
+ 
+
+************************************************************************
+
+OPTIMIZATION FILE AND PARAMETER INFORMATION :
+---------------------------------------------
+
+  FEM model file               : 03.fem
+  Output files prefix          : 03
+  Model read from files:
+ (*1)	    03.fem
+
+************************************************************************
+
+ 
+
+************************************************************************
+
+FINITE ELEMENT MODEL DATA INFORMATION :
+---------------------------------------
+
+  Total # of Grids (Structural)        :    861193
+  Total # of Elements Excluding Contact:   4418964
+  Total # of S2S Contact Elements (3D) :       787 (no internally created CGAPG)
+  Total # of Rigid Elements            :        18
+  Total # of Rigid Element Constraints :       720
+  Total # of Local Coordinate Systems  :         7
+  Total # of Degrees of Freedom        :   2580342
+  (Structural)
+  Total # of Non-zero Stiffness Terms  :  55125867
+
+ 
+  Element Type Information
+  ------------------------
+
+   CTETRA   Elements   :  4418964
+
+  Load and Boundary Information
+  -----------------------------
+
+   LOAD and TEMP Sets:         2
+   SPC   Sets        :         1
+
+  Material and Property Information
+  ---------------------------------
+
+   PSOLID  Cards      :         7
+   MAT9ORT Cards     :         1
+
+  S2S Contact Element Connectivity Information
+  --------------------------------------------
+
+   Average # of nodes per element  :        17
+   Maximum # of nodes per element  :        26
+
+************************************************************************
+
+ 
+
+************************************************************************
+
+OPTIMIZATION PROBLEM PARAMETERS :
+---------------------------------
+
+ NO DESIGN MATERIAL OR DESIGN VARIABLES FOUND  : ANALYSIS ONLY
+
+   ------------------------
+   Static Subcase Summary :
+   ------------------------
+
+   ----------   --------  -------  --------------------- 
+   Subcase ID    SPC ID   LOAD ID  Preloading Subcase ID
+   ----------   --------  -------  --------------------- 
+        1            1          2
+        2            1          3
+   ----------   --------  -------  --------------------- 
+
+   --------------------------
+   Buckling Subcase Summary :
+   --------------------------
+
+   ----------   --------  --------  --------------
+   Subcase ID    SPC ID    Mode #   Static Subcase
+   ----------   --------  --------  --------------
+          4            1      None            1
+          5            1      None            2
+   ----------   --------  --------  --------------
+
+   Run Type                        :   Analysis Only (No design elements)
+   Run at location                 : E:/System_App/Desktop/OUTPUT/03/
+   Scratch file directory          : E:/System_App/Desktop/OUTPUT/03/
+                                     Free space:   114.830 GB
+   Number of CPU processors        :          1
+   Number of GPU cards             :          1
+
+
+************************************************************************
+
+ 
+
+************************************************************************
+
+MEMORY ESTIMATION INFORMATION :
+-------------------------------
+
+ Solver Type is:  Sparse-Matrix Solver
+                  Direct Method
+ 
+ Static Memory (RAM) Allocated in Preprocessor           :    7839 MB
+ MUMPS Solver will Run Out-Of-Core with Estimated Memory :    3237 MB
+ Estimated Total Memory (RAM)                            :   11076 MB
+ 
+ Estimated Memory (RAM) for Out-of-Core Solution         :   11076 MB
+ Estimated Memory (RAM) for In-Core Solution             :   27642 MB
+ Recommended # of Processes (-np) for Load Decomposition      :       3
+ 
+DISK SPACE ESTIMATION INFORMATION :
+-----------------------------------
+
+ Estimated Disk Space for Output Data Files              :    2460 MB
+ Estimated Scratch Disk Space for In-Core Solution       :    3316 MB
+ Estimated Scratch Disk Space for Out-of-Core Solution   :   16968 MB
+
+************************************************************************
+
+
+BEGINNING ANALYSIS SOLUTION ....
+
+
+************************************************************************
+
+ANALYSIS RESULTS :
+------------------
+
+  
+ITERATION   0
+  
+ *** INFORMATION # 3454
+ MPC, RBE# (and other rigids) and JOINTG constraints for
+ subcase 1 will be enforced with lagrange multipliers.
+  
+ List of Auto-SPC d.o.f.s for loadcase   1
+ Total number of Auto-SPC d.o.f.s =  648
+  
+ 		------------------------------
+ 		  Grid No.         Component
+ 		------------------------------
+                       7997             4 5 6
+                       8009             4 5 6
+                       8010             4 5 6
+                       8011             4 5 6
+                       8012             4 5 6
+                       8013             4 5 6
+                       8014             4 5 6
+                       8026             4 5 6
+                       8027             4 5 6
+                       8028             4 5 6
+                       8029             4 5 6
+                       8030             4 5 6
+                      16432             4 5 6
+                      16433             4 5 6
+                      16434             4 5 6
+                      16435             4 5 6
+                      16436             4 5 6
+                      16446             4 5 6
+                      16447             4 5 6
+                      16448             4 5 6
+                      16449             4 5 6
+                      16450             4 5 6
+                      18345             4 5 6
+                      18355             4 5 6
+                      18356             4 5 6
+                      18357             4 5 6
+                      18358             4 5 6
+                      18359             4 5 6
+                      18369             4 5 6
+                      18370             4 5 6
+                      18371             4 5 6
+                      18372             4 5 6
+                      34352             4 5 6
+                      34353             4 5 6
+ 		------------------------------
+  
+	Because of PARAM, PRGPST, 100, Auto-SPC printing is limited to 100 dofs.
+  
+  
+ List of Auto-SPC d.o.f.s for loadcase   4
+ Total number of Auto-SPC d.o.f.s =  648
+  
+ 		------------------------------
+ 		  Grid No.         Component
+ 		------------------------------
+                       7997             4 5 6
+                       8009             4 5 6
+                       8010             4 5 6
+                       8011             4 5 6
+                       8012             4 5 6
+                       8013             4 5 6
+                       8014             4 5 6
+                       8026             4 5 6
+                       8027             4 5 6
+                       8028             4 5 6
+                       8029             4 5 6
+                       8030             4 5 6
+                      16432             4 5 6
+                      16433             4 5 6
+                      16434             4 5 6
+                      16435             4 5 6
+                      16436             4 5 6
+                      16446             4 5 6
+                      16447             4 5 6
+                      16448             4 5 6
+                      16449             4 5 6
+                      16450             4 5 6
+                      18345             4 5 6
+                      18355             4 5 6
+                      18356             4 5 6
+                      18357             4 5 6
+                      18358             4 5 6
+                      18359             4 5 6
+                      18369             4 5 6
+                      18370             4 5 6
+                      18371             4 5 6
+                      18372             4 5 6
+                      34352             4 5 6
+                      34353             4 5 6
+ 		------------------------------
+  
+	Because of PARAM, PRGPST, 100, Auto-SPC printing is limited to 100 dofs.
+  
+  
+ *** INFORMATION # 3454
+ MPC, RBE# (and other rigids) and JOINTG constraints for
+ subcase 4 will be enforced with elimination of dependent dofs.
+  
+ List of Auto-SPC d.o.f.s for loadcase   5
+ Total number of Auto-SPC d.o.f.s =  648
+  
+ 		------------------------------
+ 		  Grid No.         Component
+ 		------------------------------
+                       7997             4 5 6
+                       8009             4 5 6
+                       8010             4 5 6
+                       8011             4 5 6
+                       8012             4 5 6
+                       8013             4 5 6
+                       8014             4 5 6
+                       8026             4 5 6
+                       8027             4 5 6
+                       8028             4 5 6
+                       8029             4 5 6
+                       8030             4 5 6
+                      16432             4 5 6
+                      16433             4 5 6
+                      16434             4 5 6
+                      16435             4 5 6
+                      16436             4 5 6
+                      16446             4 5 6
+                      16447             4 5 6
+                      16448             4 5 6
+                      16449             4 5 6
+                      16450             4 5 6
+                      18345             4 5 6
+                      18355             4 5 6
+                      18356             4 5 6
+                      18357             4 5 6
+                      18358             4 5 6
+                      18359             4 5 6
+                      18369             4 5 6
+                      18370             4 5 6
+                      18371             4 5 6
+                      18372             4 5 6
+                      34352             4 5 6
+                      34353             4 5 6
+ 		------------------------------
+  
+	Because of PARAM, PRGPST, 100, Auto-SPC printing is limited to 100 dofs.
+  
+  
+ *** INFORMATION # 3454
+ MPC, RBE# (and other rigids) and JOINTG constraints for
+ subcase 5 will be enforced with elimination of dependent dofs.
+  
+ (Scratch disk space usage for starting iteration = 10813 MB)
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+(Running out-of-core solution)
+
+Volume                              =  5.50632E+06   Mass     =  3.30379E+00
+
+-----------------------------------
+Subcase    Compliance       Epsilon
+-----------------------------------
+      1  1.717099E+02 -1.243068E-12
+      2  2.739489E+02 -1.154510E-12
+-----------------------------------
+
+Note: Epsilon = Residual Strain Energy Ratio.
+
+Subcase Mode Buckling Eigenvalue
+      4    1        3.717767E+01
+      4    2        3.812733E+01
+      4    3        5.082478E+01
+      4    4        5.455332E+01
+      4    5        5.688460E+01
+      4    6        5.783990E+01
+      4    7        6.367493E+01
+      4    8        6.728583E+01
+      4    9        6.907132E+01
+      4   10        7.095643E+01
+      4   11        7.366941E+01
+      4   12        7.435176E+01
+      4   13        7.441425E+01
+      4   14        7.947147E+01
+      4   15        7.957717E+01
+      4   16        8.282772E+01
+      4   17        8.984247E+01
+      4   18        9.047790E+01
+      4   19        9.154882E+01
+      4   20        9.333256E+01
+      4   21        9.762672E+01
+      5    1        3.353999E+01
+      5    2        5.149394E+01
+      5    3        6.067223E+01
+      5    4        6.602331E+01
+      5    5        8.088149E+01
+      5    6        8.395008E+01
+      5    7        8.494030E+01
+      5    8        9.121395E+01
+      5    9        9.283517E+01
+      5   10        9.333056E+01
+      5   11        9.572899E+01
+      5   12        9.646248E+01
+      5   13        9.814509E+01
+      5   14        9.948649E+01
+
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+
+************************************************************************
+  
+ ANALYSIS COMPLETED.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+
+************************************************************************
+
+RESOURCE USAGE INFORMATION
+--------------------------
+
+ MAXIMUM MEMORY USED                                     11076 MB
+   INCLUDING MEMORY FOR MUMPS                             3237 MB
+   IN ADDITION   1844 MB MEMORY WAS ALLOCATED FOR TEMPORARY USE
+ MAXIMUM DISK SPACE USED                                 18274 MB
+   INCLUDING DISK SPACE FOR MUMPS                        13720 MB
+ MAXIMUM GPU MEMORY USED                                     1 MB
+
+************************************************************************
+
+
+************************************************************************
+
+COMPUTE TIME INFORMATION
+------------------------
+
+ EXECUTION STARTED                         Tue May 05 03:27:04 2026    
+ EXECUTION COMPLETED                       Tue May 05 04:58:59 2026    
+ ELAPSED TIME                                         01:31:55
+ CPU TIME                                             01:17:37
+
+************************************************************************
+
+  
+                        ***** END OF REPORT *****
+  
+ For OptiStruct Community Forum, go to the URL:
+ http://www.altair.com/optistruct-community
+ For Altair Community Knowledge Base, go to the URL:
+ http://www.altair.com/knowledge

@@ -1,0 +1,886 @@
+ ************************************************************************
+ **                                                                    **
+ **                                                                    **
+ **                     Altair OptiStruct(TM) 2026                     **
+ **                                                                    **
+ **             Advanced Engineering Analysis, Design and              **
+ **        Optimization Software from Altair Engineering, Inc.         **
+ **                                                                    **
+ **   OptiStruct includes an enhanced proprietary version of NASTRAN   **
+ **                                                                    **
+ **                                                                    **
+ **               Windows 10  (Build 9200)  GANJIANGMOYE               **
+ **           32 CPU:  13th Gen Intel(R) Core(TM) i9-13900HX           **
+ **                    7701 MB RAM,  28058 MB swap                     **
+ **                                                                    **
+ ** Build: 1291590uwn33xxx_Ce64RB6s8UH14M-000  1046006004000000006000  **
+ ************************************************************************
+ **  COPYRIGHT (C) 1996-2025                 Altair Engineering, Inc.  **
+ ** All Rights Reserved.  Copyright notice does not imply publication. **
+ **         Contains trade secrets of Altair Engineering, Inc.         **
+ ** Decompilation or disassembly of this software strictly prohibited. **
+ ************************************************************************
+ 
+  
+ *** OptiStruct defaults set from:
+   install config file: D:/Program Files/Altair/2026/hwsolvers/optistruct.cfg.
+  
+  
+ NOTE # 9199
+ MSGLMT=STRICT is active, all messages will be printed unless there is
+ a subsequent MSGLMT definition to limit error or warning messages.
+ You can also suppress some less important warning messages by use of
+  MSGLMT=BRIEF or UNREF (in config file or in the input data).
+  
+ *** INFORMATION # 9196
+ Using 1 NVIDIA cards for GPU acceleration.
+  
+ *** INFORMATION # 2752
+ GPU device with GPUID = 0 is used for computation.
+ Device name = NVIDIA GeForce RTX 4060 Laptop GPU, with compute capability 8.9.
+ GPU memory free =  7096.00 MB, total =  8187.50 MB.
+  
+ 1 PARAM(s) were set:
+    CHECKEL,NO
+  
+ ***************************** INFORMATION ******************************
+ * For OptiStruct useful guidelines and tips (Nonlinear analysis
+ * convergence, the model validity check etc...), go to the URL:
+ * https://help.altair.com/hwsolvers/os/topics/solvers/os/debugging.htm
+ ************************************************************************
+  
+ *** INFORMATION # 6513
+ The default of MORIENT is NORM for CONTACT with TRACK=FINITE/CONSLI.
+  
+  
+ *** WARNING 1949: All EIGRL/EIGRA/EIGRD bulk data are not referenced.
+ *** WARNING 1931:   PLOAD4 SID=   3 is not referenced by Case Control.
+  
+ *** INFORMATION # 2406
+ There exist gap/contact elements and linear analysis SUBCASE(s).
+ For linear SUBCASE, the gap/contact behavior depends on the
+ initial open/closed status and does not change.
+  
+ *** WARNING # 4783
+ Continuous sliding is ignored for contact as there is no LGDISP analysis.
+  
+ *** INFORMATION # 4739
+ The structure of surface-to-surface contact element is quite different than
+ that of node-to-surface contact element. No internal CGAP/CGAPG elements are
+ created for surface-to-surface contact.
+  
+ *** SUMMARY of characteristic edge length of CONTACT/TIE:
+ ------------------------
+    CONTACT      CharLen 
+ ------------------------
+          1   2.0024E+00
+          2   1.9962E+00
+ ------------------------
+  
+ *** INFORMATION # 815
+ The total number of rigid elements, whose rotational dependent d.o.f.
+ are removed because there is no need to constrain those d.o.f., is 12.
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ NOTE # 1852
+ AUTOMATIC SCREENING is activated.
+ Use DSCREEN,AUTO,OFF to disable automatic screening.
+  
+ *** SUMMARY of reference nodal linear stiffness for penalty calculation
+     of penalty-based CONTACT/TIE:
+ -------------------------------------
+    CONTACT    Secondary         Main 
+ -------------------------------------
+          1   8.9638E+03   1.0178E+04    
+          2   1.0062E+04   9.5291E+03    
+ -------------------------------------
+  
+ *** WARNING # 5769
+ Extrusion path defined by DTPL 1 has angle smaller than 15 degree.
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING # 3477
+ Solver out-of-core memory requirement 9696 MB exceeds host physical
+ memory 7701 MB. Please reduce number of processes per host or use more hosts.
+ 
+
+************************************************************************
+
+OPTIMIZATION FILE AND PARAMETER INFORMATION :
+---------------------------------------------
+
+  FEM model file               : 04.fem
+  Output files prefix          : 04
+  Model read from files:
+ (*1)	    04.fem
+
+************************************************************************
+
+ 
+
+************************************************************************
+
+FINITE ELEMENT MODEL DATA INFORMATION :
+---------------------------------------
+
+  Total # of Grids (Structural)        :    861193
+  Total # of Elements Excluding Contact:   4418964
+  Total # of S2S Contact Elements (3D) :       787 (no internally created CGAPG)
+  Total # of Rigid Elements            :        18
+  Total # of Rigid Element Constraints :       720
+  Total # of Local Coordinate Systems  :         7
+  Total # of Degrees of Freedom        :   2580342
+  (Structural)
+  Total # of Non-zero Stiffness Terms  :  55125867
+
+ 
+  Element Type Information
+  ------------------------
+
+   CTETRA   Elements   :  4418964
+
+  Load and Boundary Information
+  -----------------------------
+
+   LOAD and TEMP Sets:         1
+   SPC   Sets        :         1
+
+  Material and Property Information
+  ---------------------------------
+
+   PSOLID  Cards      :         8
+   MAT9ORT Cards     :         1
+
+  S2S Contact Element Connectivity Information
+  --------------------------------------------
+
+   Average # of nodes per element  :        17
+   Maximum # of nodes per element  :        26
+
+************************************************************************
+
+ 
+
+************************************************************************
+
+OPTIMIZATION PROBLEM PARAMETERS :
+---------------------------------
+
+ Objective Function  : Minimize Compliance
+
+ ------------------
+ Response Summary :
+ ------------------
+
+ Number of volume fraction responses   :          1
+ Number of compliance responses        :          1
+ Number of displacement responses      :      19056
+
+   ------------------------
+   Static Subcase Summary :
+   ------------------------
+
+   ----------   --------  -------  --------------------- 
+   Subcase ID    SPC ID   LOAD ID  Preloading Subcase ID
+   ----------   --------  -------  --------------------- 
+        1            1          2
+   ----------   --------  -------  --------------------- 
+
+   ---------------------------
+   Design Parameters Summary :
+   ---------------------------
+
+   Total # of topology design elements             :    198138
+   Total # of topology cards                       :         1
+ 
+   Total Volume of Design Material :   2.5212E+05
+     Total Mass of Design Material :   1.5127E-01
+     Volume of Non-Design Material :   5.2542E+06
+       Mass of Non-Design Material :   3.1525E+00
+
+   Solid Design Elements  :  PSOLID
+   ---------------------    --------
+                               8
+ 
+
+   ---------------------------------
+   Optimization Parameters Summary :
+   ---------------------------------
+
+   Initial Material Fraction [0,1] :   0.5000
+   Minimum Element Volume Fraction :   1.0000E-02
+   Discreteness Parameter          :   1.0000
+
+   Topology Optimization Method    :   Density Method
+   Maximum Number of Iterations    :        80
+ 
+   Convergence Tolerance           :   5.0000E-03
+   Step Size (Topology)            :   0.5000
+ 
+   Checkerboard Control            :   On (1 - Global Averaging)
+
+   Run Type                        :   Topology Optimization
+
+ -------------------------------
+ Topology Optimization Summary :
+ -------------------------------
+
+ -------- ----------- ----------- -----------
+ DTPL ID    Minimum     Maximum     Minimum  
+          Member Size Member Size  Gap Size  
+ -------- ----------- ----------- -----------
+        1  0.6000E+01  0.1200E+02  0.1200E+02            
+ -------- ----------- ----------- -----------
+
+ -------- ------- ------- ----------- ----------- ----------- ----------- ----------- -----------
+ DTPL ID  Pattern Pattern  Draw Dir.   Stamping     No Hole    Extrusion   Overhang    Milling   
+           Repet.  Group. Constraints Constraints Constraints Constraints Constraints Constraints
+ -------- ------- ------- ----------- ----------- ----------- ----------- ----------- -----------
+        1   NONE    NONE      NONE        NONE        NONE      NOTWIST       NONE        NONE   
+ -------- ------- ------- ----------- ----------- ----------- ----------- ----------- -----------
+
+   Restart from previous solution  :   No
+   Run at location                 : E:/System_App/Desktop/OUTPUT/
+   Scratch file directory          : E:/System_App/Desktop/OUTPUT/
+                                     Free space:    75.792 GB
+   Number of CPU processors        :          1
+   Number of GPU cards             :          1
+
+
+************************************************************************
+
+ 
+
+************************************************************************
+
+MEMORY ESTIMATION INFORMATION :
+-------------------------------
+
+ Solver Type is:  Sparse-Matrix Solver
+                  Direct Method
+ 
+ Static Memory (RAM) Allocated in Preprocessor           :    6459 MB
+ MUMPS Solver will Run Out-Of-Core with Estimated Memory :    3237 MB
+ Estimated Total Memory (RAM)                            :    9696 MB
+ 
+ Estimated Memory (RAM) for Out-of-Core Solution         :    9677 MB
+ Estimated Memory (RAM) for In-Core Solution             :   25755 MB
+ (Note: The Minimum Memory Requirement is limited by Output Module.)         
+ 
+DISK SPACE ESTIMATION INFORMATION :
+-----------------------------------
+
+ Estimated Disk Space for Output Data Files              :   12858 MB
+ Estimated Scratch Disk Space for In-Core Solution       :   25411 MB
+ Estimated Scratch Disk Space for Out-of-Core Solution   :   39063 MB
+
+************************************************************************
+
+
+BEGINNING OPTIMIZATION SOLUTION ....
+
+
+************************************************************************
+
+OPTIMIZATION HISTORY INFORMATION :
+----------------------------------
+
+  
+ITERATION   0
+  
+ *** INFORMATION # 3454
+ MPC, RBE# (and other rigids) and JOINTG constraints for
+ subcase 1 will be enforced with lagrange multipliers.
+  
+ List of Auto-SPC d.o.f.s for loadcase   1
+ Total number of Auto-SPC d.o.f.s =  648
+  
+ 		------------------------------
+ 		  Grid No.         Component
+ 		------------------------------
+                       7997             4 5 6
+                       8009             4 5 6
+                       8010             4 5 6
+                       8011             4 5 6
+                       8012             4 5 6
+                       8013             4 5 6
+                       8014             4 5 6
+                       8026             4 5 6
+                       8027             4 5 6
+                       8028             4 5 6
+                       8029             4 5 6
+                       8030             4 5 6
+                      16432             4 5 6
+                      16433             4 5 6
+                      16434             4 5 6
+                      16435             4 5 6
+                      16436             4 5 6
+                      16446             4 5 6
+                      16447             4 5 6
+                      16448             4 5 6
+                      16449             4 5 6
+                      16450             4 5 6
+                      18345             4 5 6
+                      18355             4 5 6
+                      18356             4 5 6
+                      18357             4 5 6
+                      18358             4 5 6
+                      18359             4 5 6
+                      18369             4 5 6
+                      18370             4 5 6
+                      18371             4 5 6
+                      18372             4 5 6
+                      34352             4 5 6
+                      34353             4 5 6
+ 		------------------------------
+  
+	Because of PARAM, PRGPST, 100, Auto-SPC printing is limited to 100 dofs.
+  
+  
+ (Scratch disk space usage for starting iteration = 8010 MB)
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+(Running out-of-core solution)
+
+Objective Function (Minimize COMPL) =  2.24060E+01
+Maximum Constraint Violation %      =  0.00000E+00
+Design Volume Fraction              =  5.00000E-01   Mass     =  3.22816E+00
+Discreteness Index                  =         0.00
+ 
+Density     %     Vol%
+----------------------
+0.0-0.1   0.0      0.0        | 
+0.1-0.2   0.0      0.0        | 
+0.2-0.3   0.0      0.0        | 
+0.3-0.4   0.0      0.0        | 
+0.4-0.5 100.0    100.0        |**************************************************
+0.5-0.6   0.0      0.0        | 
+0.6-0.7   0.0      0.0        | 
+0.7-0.8   0.0      0.0        | 
+0.8-0.9   0.0      0.0        | 
+0.9-1.0   0.0      0.0        | 
+ 
+Notes:    % = Percentage of Designable Elements
+       Vol% = Percentage of Designable Volume
+
+-----------------------------------
+Subcase    Compliance       Epsilon
+-----------------------------------
+      1  1.726460E+02 -2.177214E-09
+-----------------------------------
+
+Note: Epsilon = Residual Strain Energy Ratio.
+
+
+---------------------------------------------------------------------------------
+                             RETAINED RESPONSES TABLE
+---------------------------------------------------------------------------------
+Response Type  Response Subcase    Grid/  DOF/ Response      Objective  Viol.
+ User-ID         Label  /RANDPS Element/  Comp   Value       Reference/   %
+                         /Model MID/PID/  /Reg               Constraint
+                        +Frqncy     SID/                       Bound
+                         /Times Mode No.
+---------------------------------------------------------------------------------
+       2 COMPL comp_res       1        2  SOLI 2.241E+01 MIN
+       3 VOLFR vf_resp       --        8  SOLI 5.000E-01  <   5.000E-01   0.0 A
+---------------------------------------------------------------------------------
+  
+ *** INFORMATION # 6380
+ There are too many responses to be printed into the HyperGraph design
+ history file. Only the first 10000 responses will be printed. Please
+ consider using DSCREEN to reduce the number of retained responses.
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ITERATION   1
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+
+Objective Function (Minimize COMPL) =  2.21716E+01   % change =        -1.05
+Maximum Constraint Violation %      =  0.00000E+00
+Design Volume Fraction              =  4.99999E-01   Mass     =  3.22816E+00
+Discreteness Index                  =         0.00
+ 
+Density     %     Vol%
+----------------------
+0.0-0.1   0.0      0.0        | 
+0.1-0.2   0.0      0.0        | 
+0.2-0.3  37.6     37.6        |******************
+0.3-0.4   5.1      5.1        |**
+0.4-0.5   5.8      5.8        |**
+0.5-0.6   7.6      7.6        |***
+0.6-0.7   8.9      8.9        |****
+0.7-0.8  35.0     35.1        |*****************
+0.8-0.9   0.0      0.0        | 
+0.9-1.0   0.0      0.0        | 
+ 
+Notes:    % = Percentage of Designable Elements
+       Vol% = Percentage of Designable Volume
+
+-----------------------------------
+Subcase    Compliance       Epsilon
+-----------------------------------
+      1  1.724892E+02 -2.189827E-09
+-----------------------------------
+
+Note: Epsilon = Residual Strain Energy Ratio.
+
+
+---------------------------------------------------------------------------------
+                             RETAINED RESPONSES TABLE
+---------------------------------------------------------------------------------
+Response Type  Response Subcase    Grid/  DOF/ Response      Objective  Viol.
+ User-ID         Label  /RANDPS Element/  Comp   Value       Reference/   %
+                         /Model MID/PID/  /Reg               Constraint
+                        +Frqncy     SID/                       Bound
+                         /Times Mode No.
+---------------------------------------------------------------------------------
+       2 COMPL comp_res       1        2  SOLI 2.217E+01 MIN
+       3 VOLFR vf_resp       --        8  SOLI 5.000E-01  <   5.000E-01   0.0 A
+---------------------------------------------------------------------------------
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ITERATION   2
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  the 1st satisfied convergence ratio =  2.2171E-03
+
+Objective Function (Minimize COMPL) =  2.21225E+01   % change =        -0.22
+Maximum Constraint Violation %      =  0.00000E+00
+Design Volume Fraction              =  4.07588E-01   Mass     =  3.21418E+00
+Discreteness Index                  =         0.11
+ 
+Density     %     Vol%
+----------------------
+0.0-0.1   0.0      0.0        | 
+0.1-0.2  38.2     38.1        |*******************
+0.2-0.3   4.6      4.6        |**
+0.3-0.4   3.7      3.6        |*
+0.4-0.5  19.5     19.5        |*********
+0.5-0.6   9.4      9.4        |****
+0.6-0.7   7.1      7.1        |***
+0.7-0.8   6.8      6.8        |***
+0.8-0.9   6.0      6.0        |***
+0.9-1.0   4.8      4.8        |**
+ 
+Notes:    % = Percentage of Designable Elements
+       Vol% = Percentage of Designable Volume
+
+-----------------------------------
+Subcase    Compliance       Epsilon
+-----------------------------------
+      1  1.728309E+02 -2.206289E-09
+-----------------------------------
+
+Note: Epsilon = Residual Strain Energy Ratio.
+
+
+---------------------------------------------------------------------------------
+                             RETAINED RESPONSES TABLE
+---------------------------------------------------------------------------------
+Response Type  Response Subcase    Grid/  DOF/ Response      Objective  Viol.
+ User-ID         Label  /RANDPS Element/  Comp   Value       Reference/   %
+                         /Model MID/PID/  /Reg               Constraint
+                        +Frqncy     SID/                       Bound
+                         /Times Mode No.
+---------------------------------------------------------------------------------
+       2 COMPL comp_res       1        2  SOLI 2.212E+01 MIN
+       3 VOLFR vf_resp       --        8  SOLI 4.076E-01  <   5.000E-01   0.0
+---------------------------------------------------------------------------------
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ITERATION   3
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  the 2nd satisfied convergence ratio =  4.7082E-03
+
+Objective Function (Minimize COMPL) =  2.20189E+01   % change =        -0.47
+Maximum Constraint Violation %      =  0.00000E+00
+Design Volume Fraction              =  4.08298E-01   Mass     =  3.21429E+00
+Discreteness Index                  =         0.15
+ 
+Density     %     Vol%
+----------------------
+0.0-0.1  36.0     36.0        |******************
+0.1-0.2   6.3      6.2        |***
+0.2-0.3   3.7      3.6        |*
+0.3-0.4   2.7      2.7        |*
+0.4-0.5   3.8      3.8        |*
+0.5-0.6   6.1      6.1        |***
+0.6-0.7  20.1     20.2        |**********
+0.7-0.8   8.6      8.6        |****
+0.8-0.9   6.3      6.3        |***
+0.9-1.0   6.3      6.3        |***
+ 
+Notes:    % = Percentage of Designable Elements
+       Vol% = Percentage of Designable Volume
+
+-----------------------------------
+Subcase    Compliance       Epsilon
+-----------------------------------
+      1  1.727768E+02 -2.222273E-09
+-----------------------------------
+
+Note: Epsilon = Residual Strain Energy Ratio.
+
+
+---------------------------------------------------------------------------------
+                             RETAINED RESPONSES TABLE
+---------------------------------------------------------------------------------
+Response Type  Response Subcase    Grid/  DOF/ Response      Objective  Viol.
+ User-ID         Label  /RANDPS Element/  Comp   Value       Reference/   %
+                         /Model MID/PID/  /Reg               Constraint
+                        +Frqncy     SID/                       Bound
+                         /Times Mode No.
+---------------------------------------------------------------------------------
+       2 COMPL comp_res       1        2  SOLI 2.202E+01 MIN
+       3 VOLFR vf_resp       --        8  SOLI 4.083E-01  <   5.000E-01   0.0
+---------------------------------------------------------------------------------
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ITERATION   4
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  the 2nd satisfied convergence ratio =  2.8125E-04
+
+Objective Function (Minimize COMPL) =  2.21287E+01   % change =         0.50
+Maximum Constraint Violation %      =  0.00000E+00
+Design Volume Fraction              =  3.50603E-01   Mass     =  3.20556E+00
+Discreteness Index                  =         0.08
+ 
+Density     %     Vol%
+----------------------
+0.0-0.1  38.3     38.3        |*******************
+0.1-0.2   5.8      5.7        |**
+0.2-0.3   3.2      3.2        |*
+0.3-0.4   2.8      2.7        |*
+0.4-0.5  16.1     16.2        |********
+0.5-0.6   9.2      9.2        |****
+0.6-0.7   9.7      9.7        |****
+0.7-0.8   7.0      7.1        |***
+0.8-0.9   5.1      5.1        |**
+0.9-1.0   2.8      2.8        |*
+ 
+Notes:    % = Percentage of Designable Elements
+       Vol% = Percentage of Designable Volume
+
+-----------------------------------
+Subcase    Compliance       Epsilon
+-----------------------------------
+      1  1.735755E+02 -2.266236E-09
+-----------------------------------
+
+Note: Epsilon = Residual Strain Energy Ratio.
+
+
+---------------------------------------------------------------------------------
+                             RETAINED RESPONSES TABLE
+---------------------------------------------------------------------------------
+Response Type  Response Subcase    Grid/  DOF/ Response      Objective  Viol.
+ User-ID         Label  /RANDPS Element/  Comp   Value       Reference/   %
+                         /Model MID/PID/  /Reg               Constraint
+                        +Frqncy     SID/                       Bound
+                         /Times Mode No.
+---------------------------------------------------------------------------------
+       2 COMPL comp_res       1        2  SOLI 2.213E+01 MIN
+       3 VOLFR vf_resp       --        8  SOLI 3.506E-01  <   5.000E-01   0.0
+---------------------------------------------------------------------------------
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ITERATION   5
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+  the 2nd satisfied convergence ratio =  1.7396E-03
+
+Objective Function (Minimize COMPL) =  2.21611E+01   % change =         0.15
+Maximum Constraint Violation %      =  0.00000E+00
+Design Volume Fraction              =  3.60731E-01   Mass     =  3.20709E+00
+Discreteness Index                  =         0.07
+ 
+Density     %     Vol%
+----------------------
+0.0-0.1  37.6     37.6        |******************
+0.1-0.2   6.0      6.0        |**
+0.2-0.3   3.3      3.3        |*
+0.3-0.4   4.2      4.2        |**
+0.4-0.5   5.1      5.1        |**
+0.5-0.6  17.3     17.4        |********
+0.6-0.7  10.3     10.3        |*****
+0.7-0.8   8.6      8.6        |****
+0.8-0.9   4.9      4.9        |**
+0.9-1.0   2.6      2.7        |*
+ 
+Notes:    % = Percentage of Designable Elements
+       Vol% = Percentage of Designable Volume
+
+-----------------------------------
+Subcase    Compliance       Epsilon
+-----------------------------------
+      1  1.737414E+02 -2.275390E-09
+-----------------------------------
+
+Note: Epsilon = Residual Strain Energy Ratio.
+
+
+---------------------------------------------------------------------------------
+                             RETAINED RESPONSES TABLE
+---------------------------------------------------------------------------------
+Response Type  Response Subcase    Grid/  DOF/ Response      Objective  Viol.
+ User-ID         Label  /RANDPS Element/  Comp   Value       Reference/   %
+                         /Model MID/PID/  /Reg               Constraint
+                        +Frqncy     SID/                       Bound
+                         /Times Mode No.
+---------------------------------------------------------------------------------
+       2 COMPL comp_res       1        2  SOLI 2.216E+01 MIN
+       3 VOLFR vf_resp       --        8  SOLI 3.607E-01  <   5.000E-01   0.0
+---------------------------------------------------------------------------------
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+
+************************************************************************
+  
+ OPTIMIZATION HAS CONVERGED.
+  
+ FEASIBLE DESIGN (ALL CONSTRAINTS SATISFIED).
+  
+  
+ *** WARNING: The amount of allocated memory exceeds available RAM - this
+may cause significant slowing down of solution progress due to the swapping
+out memory to the swap file. It is recommended to use out-of-core
+solution to reduce memory requirements.
+  
+
+************************************************************************
+
+RESOURCE USAGE INFORMATION
+--------------------------
+
+ MAXIMUM MEMORY USED                                      9696 MB
+   INCLUDING MEMORY FOR MUMPS                             3237 MB
+   IN ADDITION   1844 MB MEMORY WAS ALLOCATED FOR TEMPORARY USE
+ MAXIMUM DISK SPACE USED                                 21384 MB
+   INCLUDING DISK SPACE FOR MUMPS                        13720 MB
+ MAXIMUM GPU MEMORY USED                                     1 MB
+
+************************************************************************
+
+
+************************************************************************
+
+COMPUTE TIME INFORMATION
+------------------------
+
+ EXECUTION STARTED                         Fri May 15 02:22:38 2026    
+ EXECUTION COMPLETED                       Fri May 15 02:45:51 2026    
+ ELAPSED TIME                                         00:23:13
+ CPU TIME                                             00:20:08
+
+************************************************************************
+
+  
+                        ***** END OF REPORT *****
+  
+ For OptiStruct Community Forum, go to the URL:
+ http://www.altair.com/optistruct-community
+ For Altair Community Knowledge Base, go to the URL:
+ http://www.altair.com/knowledge
